@@ -2,8 +2,8 @@ import os
 from os.path import join
 
 INVESTIGATE = False  # Records coverages and saves them. Generates a plot in the end. Do not use with automate.
-TEST_OUTSIDE_FUZZER = True  # Runs FATE as standalone (1+1) EA
-BLACKBOX = True  # Disables white-box information such as thresholds and feat imp.
+TEST_OUTSIDE_FUZZER = False  # Runs FATE as standalone (1+1) EA
+BLACKBOX = False  # Disables white-box information such as thresholds and feat imp.
 FORCE_DEFAULT_EPSILON = True or TEST_OUTSIDE_FUZZER  # Runs all datasets with the default epsilon
 FORCE_DEFAULT_MUTATION_CHANCE = False or TEST_OUTSIDE_FUZZER  # Runs all datasets with the default mutation chance
 LIMIT_TIME = True  # If false, run 10 times as long

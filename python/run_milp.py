@@ -5,15 +5,14 @@ import numpy as np
 from datetime import datetime
 from constants import NUM_THREADS, NUM_ADV_CHECKS
 from datasets import is_difficult_for_milp, get_num_classes
-# from external.kantchelian_attack import attack_json_for_X_y
-from external.kantchelian_attack_2 import KantchelianAttackWrapper
+from external.kantchelian_attack import KantchelianAttackWrapper
 from run_fate import generate_model_path, generate_x_test_path, generate_y_test_path, take_n
 from run_zhang import _generate_json_filename
 from utils import load, to_json, write_file
 
-_datasets = ['WEB', 'VOWEL']
+# _datasets = ['WEB', 'VOWEL']
 # _datasets = ['MNIST', 'FMNIST']
-# _datasets = ['BC', 'DIABETES', 'IJ', 'COV', 'HIGGS', '26']
+_datasets = ['BC', 'DIABETES', 'IJ', 'COV', 'HIGGS', '26']
 _mts = ['GB', 'RF']
 _output_filename = 'milp_results.csv'
 n_iter = 1
